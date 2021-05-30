@@ -1,0 +1,80 @@
+/* caroules */
+.home .info-carousel {
+  background-color: var(--color-blueDark);
+  color: var(--color-white);
+  padding: 0 5px;
+}
+.home .carousel-indicators {
+  margin-bottom: 0rem;
+}
+/* about us */
+.home .about-us,
+.home .covid {
+  width: 100%;
+  color: var(--color-white);
+  font-weight: bold;
+  position: relative;
+}
+.home .info-us,
+.home .info-covid {
+  text-align: center;
+  padding: 5px 20px;
+  background-color: var(--color-blueDark);
+}
+/* services */
+.home .services h3 {
+  color: var(--color-red);
+}
+.home .services-list {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.home .services-list li {
+  text-align: center;
+  font-weight: bolder;
+  margin: 1rem 0;
+}
+.home .services-list li div {
+  height: 100px;
+}
+.home .services-list li p {
+  margin: 0;
+}
+/* cv form */
+.home .cv-section .warnings ol li {
+  list-style: decimal;
+  display: list-item;
+}
+.home .cv-section .warnings ol li:last-child {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .home .info-us {
+    position: absolute;
+    top: 40px;
+    padding: 0 20px;
+    background-color: transparent;
+  }
+  .home .info-covid {
+    position: absolute;
+    top: 27px;
+    left: 373px;
+    padding: 0px 10px;
+    background-color: transparent;
+  }
+  .home .cv-section form{
+      border-left: 1px solid var(--color-blue);
+  }
+}
+@media (min-width: 1024px) {
+  .home .info-us span,
+  .home .info-covid span,
+  .home .info-carousel p {
+    font-size: 20px;
+  }
+  .home .info-us,
+  .home .info-covid {
+    top: 55px;
+  }
+}

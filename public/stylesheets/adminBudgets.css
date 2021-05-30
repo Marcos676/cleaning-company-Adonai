@@ -1,0 +1,27 @@
+/* budgets list */
+.admin-budget-list .budgets-container{
+    background-image: initial;
+    background-color: var(--color-blueDark);
+}
+
+/* budget create */
+.budgetForms{
+    background-color: var(--color-blueDark);
+    color: var(--color-white);
+}
+
+.budgetForms .btn-form{
+    width: 200px;
+}
+
+@media(min-width: 768px){
+    .budgetForms .budget-form{
+        margin-left: 50px;
+    }
+}
+@media(min-width: 1024px){
+    .budgetForms .budget-form{
+        margin-left: 100px;
+    }
+}
+

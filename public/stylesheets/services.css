@@ -1,0 +1,59 @@
+
+.budgets-services .budgets-container h3{
+    color: var(--color-white);
+}
+.budgets-services .budgets-container{
+    background-color: var(--color-blue);
+    background-image: url("../images/budgets/budget.png");
+    /* background-repeat: no-repeat; */
+    background-size: 100%;
+}
+/* budgetcard start*/
+.budgets-services .budget-card{
+    width: 200px;
+    background-color: var(--color-blueDark);
+    border-radius: 35px 35px 0 35px;
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+}
+.budgets-services .budget-card .budget-detail{
+background-color: var(--color-blue);
+border-top: 1px solid var(--color-white);
+border-bottom: 1px solid var(--color-white);
+}
+.budgets-services .budget-card .budget-detail li{
+    padding: 5px 0;
+    display: block;
+    margin: 0 5px;
+    border-bottom: 1px solid var(--color-red);
+}
+.budgets-services .budget-card .budget-detail li:last-child{
+    border: none
+}
+.budgets-services .budget-card a{
+    font-size: 16px;
+}
+/* budgetcard end*/
+
+/* services */
+.budgets-services .services h3{
+    background-color: var(--color-blueDark);
+    color: var(--color-white);
+}
+
+.budgets-services .service-name{
+    color: var(--color-white);
+}
+
+/* custom quote */
+.budgets-services .custom-quote{
+    background-color: var(--color-blueDark);
+    color: var(--color-white);
+}
+
+
+@media(min-width: 768px){
+    .budgets-services .form-consultation{
+        border-left: 1px solid var(--color-blue);
+    }
+}

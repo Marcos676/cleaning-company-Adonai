@@ -1,0 +1,114 @@
+/* IMPORTS */
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* css */
+@import 'header.css';
+@import 'footer.css';
+@import 'home.css';
+@import 'services.css';
+@import 'login.css';
+@import 'adminBudgets.css';
+
+
+/* VARIABLES */
+:root {
+  --color-white: #ffffff;
+  --color-grey: #aaaaaa;
+  --color-red: #f41414; 
+  --color-blue: #0061a8;
+  --color-blueDark: #132c33;
+  --font: "Roboto";
+}
+
+/* General classes */
+* {
+  box-sizing: border-box;
+}
+body {
+  font: 16px var(--font);
+}
+a{
+  color: initial;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: initial;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style: none;
+  display: inline;
+}
+.btn-red{
+background-color: var(--color-red);
+}
+.btn-blue{
+  background-color: var(--color-blue);
+
+}
+.btn-false{
+  font-size: 16px;
+}
+.btn-blue-dark{
+  background-color: var(--color-blueDark);
+}
+.btn-edit-delete {
+  width: 150px;
+}
+.max-width {
+  max-width: 1450px;
+}
+.padding-l-r {
+  padding: 5px  0;
+}
+.no-padd{
+  padding: 0;
+}
+.si-padd{
+  padding-right: var(--bs-gutter-x,.75rem);
+  padding-left: var(--bs-gutter-x,.75rem);
+}
+/* margin for header responsive */
+.margin-top{
+  margin-top: 167px;
+}
+.margin-admin-top{
+  margin-top: 63px;
+
+}
+.font-red{
+  color: var(--color-red);
+}
+
+@media(min-width: 425px){
+  .margin-top{
+    margin-top: 138px;
+  }
+}
+@media(min-width: 731px){
+  .margin-top{
+    margin-top: 109px;
+  }
+}
+@media(min-width: 768px){
+  .margin-admin-top{
+    margin-top: 90px;
+  }
+}
+@media(min-width: 974px){
+  .margin-admin-top{
+    margin-top: 62px;
+  }
+}
+@media(min-width: 1024px){
+  .margin-top{
+    margin-top: 120px;
+  }
+  .margin-admin-top{
+    margin-top: 74px;
+  }
+}

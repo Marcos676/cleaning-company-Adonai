@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include("./partials/head") %>
+  <body>
+    <%- include("./partials/header") %>
+
+    <div class="login container-fluid max-width margin-top py-4">
+
+      <h3 class="text-center fw-bold mb-4">INGRESAR</h3>
+      
+      <form action="" class="form-login form-group pt-3 text-center fw-bold" method="POST">
+          <label class="d-block text-start fs-5" for="email">Email:</label>
+        <input class="form-control" type="email" name="email" id="email">
+        <p class="font-red fw-normal d-block text-start my-1">Campo obligatorio</p>
+        <label class="d-block text-start  fs-5" for="pass">Contraseña:</label>
+        <input class="form-control" type="password" name="password" id="pass">
+        <p class="font-red fw-normal d-block text-start my-1">La contraseña no es válida</p>
+        <button class="btn btn-primary btn-blue fw-bold mt-4" type="submit">Ingresar</button>
+      </form>
+    </div>
+
+    <%- include("./partials/footer") %>
+  </body>
+</html>

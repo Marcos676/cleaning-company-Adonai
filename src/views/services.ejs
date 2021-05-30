@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('./partials/head') %>
+  <body>
+    <%- include('./partials/header') %>
+
+    <div class="budgets-services margin-top max-width container-fluid no-padd">
+      <!-- Budgets -->
+      <div class="budgets">
+        <div class="budgets-container py-4">
+          <h3 class="text-center fw-bold">NUESTROS PRESUPUESTOS</h3>
+          <div
+            class="
+              d-flex
+              w-100
+              m-0
+              justify-content-around
+              flex-wrap
+              budgets-list
+            "
+          >
+            <% for( let i = 0; i < 5; i++ ) { %>
+            <div class="budget-card fw-bold no-padd text-center py-1 my-4 mx-5">
+              <h6 class="fw-bold m-0 px-3">FINAL DE OBRA</h6>
+              <h5 class="fw-bold">$22.000</h5>
+              <ul class="budget-detail">
+                <li>7 vez por semana</li>
+                <li>4 horas</li>
+                <li>No incluye IVA</li>
+                <li>No incluye materiales</li>
+              </ul>
+              <a href="/abonos-servicios/#consulta-personalizada" class="btn btn-dark btn-red mt-1 p-1 fw-bold"
+                >ADQUIRIR PLAN</a
+              >
+            </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why hire us -->
+      <div class="hire-us my-5 mx-3">
+        <h2 class="fw-bold text-center mb-4">¿POR QUÉ CONTRATARNOS?</h2>
+        <h4 class="text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          deserunt consequuntur esse repudiandae iste voluptatum doloribus
+          libero sed perferendis eius accusamus ab ad vitae facere nihil quod
+          officia dolor perspiciatis modi, fuga nisi veniam? Earum, aperiam,
+          provident cum laborum nam mollitia recusandae culpa quisquam deleniti
+          modi ipsa voluptates accusantium animi?
+        </h4>
+      </div>
+
+      <!-- Services -->
+      <div id="servicios" class="services">
+        <h3 class="text-center fw-bold m-0 py-1">Nuestros servicios</h3>
+        <!-- Repeat services -->
+        <!-- 1 -->
+        <div id="desinfeccion" class="w-100 position-relative">
+          <img
+            class="w-100"
+            src="/images/services/service-desinfection.png"
+            alt=""
+          />
+          <h4
+            class="
+              service-name
+              position-absolute
+              top-50
+              start-50
+              translate-middle
+              fw-bold
+              text-center
+            "
+          >
+            DESINFECCIÓN
+          </h4>
+        </div>
+        <!-- 2 -->
+        <div id="limpieza-de-oficinas" class="w-100 position-relative">
+          <img
+            class="w-100"
+            src="/images/services/service-crearingOffice.png"
+            alt=""
+          />
+          <h4
+            class="
+              service-name
+              position-absolute
+              top-50
+              start-50
+              translate-middle
+              fw-bold
+              text-center
+            "
+          >
+            LIMPIEZA SE OFICINAS
+          </h4>
+        </div>
+        <!-- 3 -->
+        <div id="finales-de-obra" class="w-100 position-relative">
+          <img
+            class="w-100"
+            src="/images/services/service-endOfWork.png"
+            alt=""
+          />
+          <h4
+            class="
+              service-name
+              position-absolute
+              top-50
+              start-50
+              translate-middle
+              fw-bold
+              text-center
+            "
+          >
+            FINALES DE OBRA
+          </h4>
+        </div>
+        <!-- 4 -->
+        <div id="limpieza-en-escuelas" class="w-100 position-relative">
+          <img
+            class="w-100"
+            src="/images/services/service-schools.png"
+            alt=""
+          />
+          <h4
+            class="
+              service-name
+              position-absolute
+              top-50
+              start-50
+              translate-middle
+              fw-bold
+              text-center
+            "
+          >
+            LIMPIEZA EN ESCUELAS
+          </h4>
+        </div>
+        <!-- 5 -->
+        <div id="servicios-de-hoteleria" class="w-100 position-relative">
+          <img class="w-100" src="/images/services/service-hotel.png" alt="" />
+          <h4
+            class="
+              service-name
+              position-absolute
+              top-50
+              start-50
+              translate-middle
+              fw-bold
+              text-center
+            "
+          >
+            SERVICIOS DE HOTELERÍA
+          </h4>
+        </div>
+        <!-- 6 -->
+        <div
+          id="servicios-de-hoteleria-en-hospitales"
+          class="w-100 position-relative"
+        >
+          <img
+            class="w-100"
+            src="/images/services/service-hospital.png"
+            alt=""
+          />
+          <h4
+            class="
+              service-name
+              position-absolute
+              top-50
+              start-50
+              translate-middle
+              fw-bold
+              text-center
+            "
+          >
+            HOTELERÍA EN HOSPITALES
+          </h4>
+        </div>
+      </div>
+
+      <!-- custom quote form -->
+      <div id="consulta-personalizada" class="custom-quote row p-4">
+        <div class="title col-12 col-md-6">
+          <h2 class="fw-bold mb-4">¿NECESITAS UNA COTIZACION PERSONALIZADA?</h2>
+          <h4 class="mb-4">
+            Completa el formulario y nos comunicaremos con la propuesta que se
+            ajuste a tu necesidad.
+          </h4>
+        </div>
+
+        <form
+          action=""
+          class="
+            form-consultation
+            text-center
+            form-group
+            cv-form
+            col-12 col-md-6
+          "
+          enctype="multipart/form-data"
+          method="POST"
+        >
+          <input
+            class="form-control"
+            type="text"
+            name="name"
+            id=""
+            placeholder="Nombre y apellido"
+          />
+          <p class="font-red fw-normal d-block text-start my-1">Campo obligatorio</p>
+          <input
+            class="form-control"
+            type="number"
+            name="tel"
+            id=""
+            placeholder="Teléfono"
+          />
+          <p class="font-red fw-normal d-block text-start my-1">Campo obligatorio</p>
+          <input
+            class="form-control"
+            type="email"
+            name="email"
+            id=""
+            placeholder="Email"
+          />
+          <p class="font-red fw-normal d-block text-start my-1">Campo obligatorio</p>
+          <textarea
+            class="form-control"
+            name="message"
+            id=""
+            cols="30"
+            rows="3"
+            placeholder="Mensaje"
+          ></textarea>
+          <p class="font-red fw-normal d-block text-start my-1">Campo obligatorio</p>
+
+          <button
+            class="fw-bold btn btn-dark btn-blue fs-5 mt-3 px-4 py-1"
+            type="submit"
+          >
+            Enviar
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <%- include('./partials/footer') %>
+  </body>
+</html>

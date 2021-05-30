@@ -1,0 +1,83 @@
+/* contact bar (dark blue) */
+header{
+  position: fixed;
+  top: 0;
+  z-index: 5;
+}
+.header .contact-bar {
+  background-color: var(--color-blueDark);
+}
+.header .contact-list {
+  text-align: end;
+  width: 100%;
+}
+.header .contact-list li {
+  padding-left: 6px;
+  font-size: 20px;
+}
+.header .contact-list a,
+.header .nav-contain li .links,
+.header .nav-contain .bars-icon {
+  color: var(--color-white);
+  font-weight: bold;
+  vertical-align: middle;
+}
+.header .contact-list li i {
+  font-size: 27px;
+  font-weight: initial;
+}
+.header .contact-list .tel i {
+  color: var(--color-red);
+}
+.header .contact-list .tel {
+  display: list-item;
+}
+.header .contact-list .phone {
+  font-weight: bold;
+}
+.header .contact-list .btn {
+  padding: 2px;
+}
+
+/* nav-bar blue */
+.header .nav-bar {
+  background-color: var(--color-blue);
+  display: inline-flex;
+  width: 100vw;
+  justify-content: space-between;
+}
+.header .logo-contain {
+  width: 50px;
+}
+.header .nav-contain li {
+  text-align: center;
+  font-size: 20px;
+}
+.header .nav-contain .collapse {
+  justify-content: flex-end;
+}
+.header .nav-contain .collapse .nav-list {
+  margin: 0;
+}
+/* mobile L */
+@media (min-width: 425px) {
+  .header .contact-list li {
+    padding-left: 20px;
+  }
+  .header .contact-list .tel {
+    display: inline;
+  }
+}
+/* tablet */
+@media (min-width: 768px) {
+  
+}
+/* laptop */
+@media (min-width: 1024px) {
+    .header .logo-contain {
+        width: 60px;
+      }
+  .header .nav-contain li {
+    margin-left: 35px;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include("../partials/head")  %> 
+<body>
+<%- include("./partials/header")  %> 
+
+<div class="budgets-services admin-budget-list container-fluid margin-admin-top no-padd max-width">
+    <!-- Budgets -->
+    <div class="budgets">
+        <div class="budgets-container py-4">
+          <h3 class="text-center fw-bold">NUESTROS PRESUPUESTOS</h3>
+          <div
+            class="
+              d-flex
+              w-100
+              m-0
+              justify-content-around
+              flex-wrap
+              budgets-list
+            "
+          >
+            <% for( let i = 0; i < 5; i++ ) { %>
+            <div class="budget-card fw-bold no-padd text-center py-1 my-4 mx-5">
+              <h6 class="fw-bold m-0 px-3">FINAL DE OBRA</h6>
+              <h5 class="fw-bold">$22.000</h5>
+              <ul class="budget-detail">
+                <li>7 vez por semana</li>
+                <li>4 horas</li>
+                <li>No incluye IVA</li>
+                <li>No incluye materiales</li>
+              </ul>
+              <form action="" method="POST">
+              <a href="/admin/editar-presupuesto" class="btn btn-dark btn-blue mt-1 p-1 btn-edit-delete fw-bold"
+                >EDITAR</a
+              >
+              <button type="submit" class="btn btn-dark btn-red mt-1 p-1 btn-edit-delete fw-bold btn-false"
+                >ELIMINAR</button
+              >
+            </form>
+            </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+</div>
+
+<%- include("./partials/footer")  %> 
+
+</body>
+</html>

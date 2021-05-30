@@ -1,0 +1,15 @@
+.login{
+    background-color: var(--color-blueDark);
+    color: var(--color-white);
+}
+
+@media(min-width:768px){
+    .login .form-login{
+        padding: 0 25%;
+    }
+}
+@media(min-width:1024px){
+    .login .form-login{
+        padding: 0 30%;
+    }
+}
