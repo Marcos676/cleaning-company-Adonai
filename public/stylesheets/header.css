@@ -3,6 +3,7 @@ header{
   position: fixed;
   top: 0;
   z-index: 5;
+  width: 100%;
 }
 .header .contact-bar {
   background-color: var(--color-blueDark);
@@ -43,7 +44,7 @@ header{
 .header .nav-bar {
   background-color: var(--color-blue);
   display: inline-flex;
-  width: 100vw;
+  width: 100%;
   justify-content: space-between;
 }
 .header .logo-contain {

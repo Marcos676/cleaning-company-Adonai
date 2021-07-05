@@ -5,16 +5,39 @@
     <%- include("./partials/header") %>
 
     <div class="login container-fluid max-width margin-top py-4">
-
+<!-- Titulo -->
       <h3 class="text-center fw-bold mb-4">INGRESAR</h3>
       
-      <form action="" class="form-login form-group pt-3 text-center fw-bold" method="POST">
+      <form action="/ingresar" class="form-login form-group pt-3 text-center fw-bold" method="POST">
+<!-- Email -->
           <label class="d-block text-start fs-5" for="email">Email:</label>
-        <input class="form-control" type="email" name="email" id="email">
-        <p class="font-red fw-normal d-block text-start my-1">Campo obligatorio</p>
+
+        <input class="form-control <%= typeof emailInvalid !== 'undefined'? 'is-invalid' : null %> <%= typeof emailValid !== 'undefined'? 'is-valid' : null %>"
+        type="email"
+        name="email" 
+        id="email"
+        value="<%= (typeof old != 'undefined' && old.email ? old.email : null) %>">
+
+<!-- validacion de email -->
+        <p class="font-red fw-normal d-block text-start my-1">
+          <%= (typeof errores !='undefined' && errores.email) ? errores.email.msg : null %>
+        </p>
+        
+<!-- pass -->
         <label class="d-block text-start  fs-5" for="pass">Contraseña:</label>
-        <input class="form-control" type="password" name="password" id="pass">
-        <p class="font-red fw-normal d-block text-start my-1">La contraseña no es válida</p>
+
+        <input class="form-control <%= typeof passInvalid !== 'undefined'? 'is-invalid' : null %>"
+         type="password"
+         name="password" 
+         id="pass">
+
+        <!-- validacion de pass -->
+        <p class="font-red fw-normal d-block text-start my-1"> 
+          <%= (typeof errores !='undefined' && errores.password) ? errores.password.msg
+          : null %>
+          </p>
+
+        <!-- boton submit -->
         <button class="btn btn-primary btn-blue fw-bold mt-4" type="submit">Ingresar</button>
       </form>
     </div>

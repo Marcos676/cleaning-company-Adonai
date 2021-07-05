@@ -5,19 +5,19 @@
     <%- include("./partials/header") %>
 
     <div class="login container-fluid max-width margin-admin-top py-4">
-
+      <!-- Titulo -->
       <h3 class="text-center fw-bold mb-4">CAMBIAR CONTRASEÑA</h3>
       
       <form action="" class="form-login form-group pt-3 text-center fw-bold" method="POST">
-
+        <!-- pass -->
           <label class="d-block text-start fs-5" for="pass">Contraseña actual</label>
         <input class="form-control" type="password" name="pass" id="pass">
-        <p class="font-red fw-normal d-block text-start my-1">Campo obligatorio</p>
-
+        <p class="font-red fw-normal d-block text-start my-1 errorPass">Campo obligatorio</p>
+        <!-- new pass -->
         <label class="d-block text-start  fs-5" for="newPass">Nueva contraseña</label>
         <input class="form-control" type="password" name="newPass" id="newPass">
         <p class="font-red fw-normal d-block text-start my-1">La contraseña no es válida</p>
-
+        <!-- repeat new pass -->
         <label class="d-block text-start  fs-5" for="repeatPass">Repetir nueva contraseña</label>
         <input class="form-control" type="password" name="repeatPass" id="repeatPass">
         <p class="font-red fw-normal d-block text-start my-1">La contraseña no es válida</p>
