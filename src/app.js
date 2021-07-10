@@ -13,6 +13,10 @@ var adminRouter = require('./routes/admin');
 
 var app = express();
 
+
+/* Middlewares */
+const cookieCheck = require('./middlewares/cookieCheck');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -28,6 +32,7 @@ app.use(session({
   resave: true,
   saveUninitialized: false
 }));
+app.use(cookieCheck);
 
 
 app.use('/', indexRouter);

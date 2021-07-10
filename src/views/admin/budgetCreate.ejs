@@ -1,107 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include("../partials/head") %>
+  <%- include("../partials/head") %>
 
   <body>
     <%- include("./partials/header") %>
 
-      <div class="budgetForms margin-admin-top container-fluid max-width">
-        <h3 class="fw-bold text-center py-4">CREAR PRESUPUESTO</h3>
+    <div class="budgetForms margin-admin-top container-fluid max-width">
+      <h3 class="fw-bold text-center py-4">CREAR PRESUPUESTO</h3>
 
-        <form class="row budget-form" action="" method="POST">
+      <form
+        class="row budget-form"
+        action="/admin/crear-presupuesto"
+        method="POST"
+      >
+        <div class="col-12 col-md-6">
+          <label class="d-block text-start fs-5 my-1" for="name">Nombre</label>
 
-          <div class="col-12 col-md-6">
-            <label class="d-block text-start fs-5 my-1" for="name">Nombre</label>
-            <input class="form-control" type="text" name="name" id="name" />
-            <p class="font-red fw-normal d-block text-start my-1">
-              Campo obligatorio
-            </p>
+          <input class="form-control <%= (typeof errores != 'undefined' &&
+          errores.name) ? " is-invalid" : null %> <%= (typeof errores
+          !='undefined' && !errores.name) ? "is-valid" : null %>" type="text"
+          name="name" id="name" value="<%= (typeof old !='undefined' && old.name
+          ? old.name : null) %>">
+          <p class="font-red fw-normal d-block text-start my-1">
+            <%= (typeof errores !='undefined' && errores.name) ?
+            errores.name.msg : null %>
+          </p>
 
-            <label class="d-block text-start fs-5 my-1" for="price">Precio</label>
-            <div class="input-group w-50">
-              <span class="input-group-text">$</span>
-              <input type="number" class="form-control" aria-label="Dollar amount" name="price" id="price" min="0">
-            </div>
-            <p class="font-red fw-normal d-block text-start my-1">
-              Campo obligatorio
-            </p>
+          <label class="d-block text-start fs-5 my-1" for="price">Precio</label>
+          <div class="input-group w-50">
+            <span class="input-group-text">$</span>
+            <input type="number" class="form-control <%= (typeof errores !=
+            'undefined' && errores.price) ? " is-invalid" : null %> <%= (typeof errores
+          !='undefined' && !errores.price) ? "is-valid" : null %>"
+            aria-label="Dollar amount" 
+            name="price" 
+            id="price" 
+            min="0"
+            value="<%= (typeof old != 'undefined' && old.price ? old.price : null) %>"
+            >
+          </div>
+          <p class="font-red fw-normal d-block text-start my-1">
+            <%= (typeof errores !='undefined' && errores.price) ?
+            errores.price.msg : null %>
+          </p>
 
-            <label class="d-block text-start fs-5 my-1" for="times">Veces por semana</label>
-            <input class="form-control w-50" type="number" name="times" id="times" min="0" max="7" />
-            <p class="font-red fw-normal d-block text-start my-1">
-              Campo obligatorio
-            </p>
+          <label class="d-block text-start fs-5 my-1" for="week"
+            >Veces por semana</label
+          >
+          <input class="form-control w-50 <%= (typeof errores != 'undefined' &&
+          errores.week) ? " is-invalid" : null %> <%= (typeof errores
+          !='undefined' && !errores.week) ? "is-valid" : null %>" 
+          type="number" 
+          name="week"
+          id="week" 
+          min="0" 
+          max="7" 
+          value="<%= (typeof old != 'undefined' && old.week ? old.week : null) %>"
+          />
+          <p class="font-red fw-normal d-block text-start my-1">
+            <%= (typeof errores !='undefined' && errores.week) ?
+            errores.week.msg : null %>
+          </p>
 
-            <label class="d-block text-start fs-5  my-1" for="hours">Horas por día</label>
-            <input class="form-control w-50" type="number" name="hours" id="hours" min="0" max="24" />
-            <p class="font-red fw-normal d-block text-start my-1">
-              Campo obligatorio
-            </p>
+          <label class="d-block text-start fs-5 my-1" for="hours"
+            >Horas por día</label
+          >
+          <input class="form-control w-50 <%= (typeof errores != 'undefined' &&
+          errores.hours) ? " is-invalid" : null %> <%= (typeof errores
+          !='undefined' && !errores.hours) ? "is-valid" : null %>" 
+          type="number" 
+          name="hours"
+          id="hours" 
+          min="0" 
+          max="24"
+          value="<%= (typeof old != 'undefined' && old.hours ? old.hours : null) %>"
 
-            <span class="fs-5 my-1">Inclusión de IVA</span>
-            <div class="form-check">
-              <input type="radio" class="form-check-input" name="iva" id="iva-si" />
-              <label class="d-block text-start fs-5 form-check-label my-1" for="iva-si">Sí</label>
+           />
+          <p class="font-red fw-normal d-block text-start my-1">
+           
+          </p> <%= (typeof errores !='undefined' && errores.hours) ?
+            errores.hours.msg : null %>
 
-              <input type="radio" class="form-check-input" name="iva" id="iva-no" />
-              <label class="d-block text-start fs-5 form-check-label my-1" for="iva-no">No</label>
-            </div>
-            <p class="font-red fw-normal d-block text-start my-1">
-              Campo obligatorio
-            </p>
+          <span class="fs-5 my-1">Inclusión de IVA</span>
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              name="iva"
+              id="iva-si"
+              value="1"
+            />
+            <label
+              class="d-block text-start fs-5 form-check-label my-1"
+              for="iva-si"
+              >Sí</label
+            >
 
-            <span class="fs-5 my-1">Inclusión de materiales</span>
-            <div class="form-check">
-              <input type="radio" class="form-check-input" name="materials" id="materials-si" />
-              <label class="d-block text-start fs-5 form-check-label my-1" for="materials-si">Sí</label>
-
-              <input type="radio" class="form-check-input" name="materials" id="materials-no" />
-              <label class="d-block text-start fs-5 form-check-label my-1" for="materials-no">No</label>
-            </div>
-            <p class="font-red fw-normal d-block text-start my-1">
-              Campo obligatorio
-            </p>
-
+            <input
+              type="radio"
+              class="form-check-input"
+              name="iva"
+              id="iva-no"
+              value="0"
+              checked
+            />
+            <label
+              class="d-block text-start fs-5 form-check-label my-1"
+              for="iva-no"
+              >No</label
+            >
           </div>
 
-          <div class="col-12 col-md-6">
+          <span class="fs-5 my-1">Inclusión de materiales</span>
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              name="materials"
+              id="materials-si"
+              value="1"
+            />
+            <label
+              class="d-block text-start fs-5 form-check-label my-1"
+              for="materials-si"
+              >Sí</label
+            >
 
-            <div class="
+            <input
+              type="radio"
+              class="form-check-input"
+              name="materials"
+              id="materials-no"
+              value="0"
+              checked
+            />
+            <label
+              class="d-block text-start fs-5 form-check-label my-1"
+              for="materials-no"
+              >No</label
+            >
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div
+            class="
               d-flex
               w-100
               m-0
               justify-content-around
               flex-wrap
               budgets-services
-            ">
-
-              <div class="budget-card fw-bold no-padd text-center py-1 my-4 mx-4">
-                <h6 class="fw-bold m-0 px-3">FINAL DE OBRA</h6>
-                <h5 class="fw-bold">$22.000</h5>
-                <ul class="budget-detail">
-                  <li>7 vez por semana</li>
-                  <li>4 horas</li>
-                  <li>No incluye IVA</li>
-                  <li>No incluye materiales</li>
-                </ul>
-                <div class="btn btn-dark btn-red mt-1 p-1 fw-bold btn-false">ADQUIRIR PLAN</div>
+            "
+          >
+            <div class="budget-card fw-bold no-padd text-center py-1 my-4 mx-4">
+              <h6 class="fw-bold m-0 px-3">FINAL DE OBRA</h6>
+              <h5 class="fw-bold">$22.000</h5>
+              <ul class="budget-detail">
+                <li>7 vez por semana</li>
+                <li>4 horas</li>
+                <li>No incluye IVA</li>
+                <li>No incluye materiales</li>
+              </ul>
+              <div class="btn btn-dark btn-red mt-1 p-1 fw-bold btn-false">
+                ADQUIRIR PLAN
               </div>
-
-              <div class="w-100 text-center">
-                <button class="btn btn-primary btn-blue btn-form m-3 fw-bold" type="submit">Crear</button>
-
-                <button class="btn btn-danger btn-red btn-form m-3 fw-bold" type="reset">Resetear</button>
-              </div>
-
             </div>
 
+            <div class="w-100 text-center">
+              <button
+                class="btn btn-primary btn-blue btn-form m-3 fw-bold"
+                type="submit"
+              >
+                Crear
+              </button>
+
+              <button
+                class="btn btn-danger btn-red btn-form m-3 fw-bold"
+                type="reset"
+              >
+                Resetear
+              </button>
+            </div>
           </div>
+        </div>
+      </form>
+    </div>
 
-        </form>
-
-      </div>
-
-      <%- include("./partials/footer") %>
+    <%- include("./partials/footer") %>
   </body>
-
 </html>

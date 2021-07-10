@@ -1,5 +1,6 @@
 const db = require("../database/models")
 const bcrypt = require('bcryptjs');
+const { validationResult } = require('express-validator');
 
 module.exports = {
     home: (req,res) => {
@@ -8,9 +9,19 @@ module.exports = {
         })
     },
     services: (req,res) => {
-        res.render('services', {
-            title: "Abonos y servicios - Adonai"
+
+        db.Budgets.findAll()
+
+        .then(budgets => {
+            //res.send(budgets)
+           
+            return res.render('services', {
+                title: "Abonos y servicios - Adonai",
+                budgets
+            })
         })
+        .catch(error => res.send(error))
+
     },
     login: (req,res) => {
         res.render('login', {
@@ -18,6 +29,17 @@ module.exports = {
         })
     },
     loginProcess:(req,res) => {
+        let errores = validationResult(req);
+        
+        if (!(errores.isEmpty())) {
+            return res.render('login', {
+                title: "Ingresar - Adonai",
+                errores: errores.mapped(),
+                old: req.body
+            })
+        }
+
+
         const { email, password } = req.body
 
         db.Admin.findOne({
@@ -38,16 +60,7 @@ module.exports = {
             } 
             
             
-            if (bcrypt.compareSync(password, admin.password)) {
-                /* creo session */
-                req.session.admin = {
-                    id: admin.id,
-                    email: admin.email
-                }
-
-                return res.redirect("/admin/presupuestos")
-
-            } else {
+            if (!(bcrypt.compareSync(password, admin.password)) || password === "") {
                 return res.render('login', {
                     title: "Ingresar - Adonai",
                     errores: {
@@ -59,12 +72,28 @@ module.exports = {
                     emailValid: 'validacion positiva',
                     passInvalid: 'validacion negativa'
                 })
+            } else {
+                  /* creo session */
+                  req.session.admin = {
+                    id: admin.id,
+                    email: admin.email
+                }
+                /* creo cookie */
+                res.cookie('Adonai', req.session.admin, {
+                    maxAge: 1000 * 60 * 60 * 24 * 7 /*La cookie vive por una semana*/
+                })
+
+                return res.redirect("/admin/presupuestos")
             }
 
         })
     },
     logout: (req,res) => {
+        /* borro la session */
         delete req.session.admin
+        /* Borro la cookie */
+        res.cookie('adonai', '', { maxAge: -1 });
+
         res.redirect('/')
     }
 }

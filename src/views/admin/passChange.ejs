@@ -8,19 +8,25 @@
       <!-- Titulo -->
       <h3 class="text-center fw-bold mb-4">CAMBIAR CONTRASEÑA</h3>
       
-      <form action="" class="form-login form-group pt-3 text-center fw-bold" method="POST">
+      <form action="/admin/cambiar-contrasenia?_method=PUT" class="form-login form-group pt-3 text-center fw-bold" method="POST">
         <!-- pass -->
           <label class="d-block text-start fs-5" for="pass">Contraseña actual</label>
         <input class="form-control" type="password" name="pass" id="pass">
-        <p class="font-red fw-normal d-block text-start my-1 errorPass">Campo obligatorio</p>
+        <p class="font-red fw-normal d-block text-start my-1 errorPass"> 
+          <%= (typeof errores !='undefined' && errores.pass) ? errores.pass.msg : null %>
+        </p>
         <!-- new pass -->
         <label class="d-block text-start  fs-5" for="newPass">Nueva contraseña</label>
         <input class="form-control" type="password" name="newPass" id="newPass">
-        <p class="font-red fw-normal d-block text-start my-1">La contraseña no es válida</p>
+        <p class="font-red fw-normal d-block text-start my-1">
+          <%= (typeof errores !='undefined' && errores.newPass) ? errores.newPass.msg : null %>
+        </p>
         <!-- repeat new pass -->
         <label class="d-block text-start  fs-5" for="repeatPass">Repetir nueva contraseña</label>
         <input class="form-control" type="password" name="repeatPass" id="repeatPass">
-        <p class="font-red fw-normal d-block text-start my-1">La contraseña no es válida</p>
+        <p class="font-red fw-normal d-block text-start my-1">
+          <%= (typeof errores !='undefined' && errores.repeatPass) ? errores.repeatPass.msg : null %>
+        </p>
         
         <button class="btn btn-primary btn-blue fw-bold mt-4" type="submit">Cambiar</button>
       </form>

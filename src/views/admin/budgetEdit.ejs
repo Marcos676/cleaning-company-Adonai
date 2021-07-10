@@ -8,59 +8,97 @@
       <div class="budgetForms margin-admin-top container-fluid max-width">
         <h3 class="fw-bold text-center py-4">EDITAR PRESUPUESTO</h3>
 
-        <form class="row budget-form" action="" method="POST">
+        <form class="row budget-form" action="/admin/editar-presupuesto/<%= budget.id %>?_method=PUT " method="POST">
 
           <div class="col-12 col-md-6">
+            <!-- name -->
             <label class="d-block text-start fs-5 my-1" for="name">Nombre</label>
-            <input class="form-control" type="text" name="name" id="name" />
+            <input class="form-control <%= (typeof errores != 'undefined' &&
+            errores.name) ? " is-invalid" : null %> <%= (typeof errores
+            !='undefined' && !errores.name) ? "is-valid" : null %>" 
+            type="text" 
+            name="name" 
+            id="name" 
+            value="<%= (typeof old != 'undefined' && old.name? old.name : budget.name) %>"
+            />
             <p class="font-red fw-normal d-block text-start my-1">
-              Campo obligatorio
+              <%= (typeof errores !='undefined' && errores.name) ?
+            errores.name.msg : null %>
             </p>
 
+            <!-- price -->
             <label class="d-block text-start fs-5 my-1" for="price">Precio</label>
             <div class="input-group w-50">
               <span class="input-group-text">$</span>
-              <input type="number" class="form-control" aria-label="Dollar amount" name="price" id="price" min="0">
+              <input type="number"
+              class="form-control <%= (typeof errores !=
+              'undefined' && errores.price) ? " is-invalid" : null %> <%= (typeof errores
+            !='undefined' && !errores.price) ? "is-valid" : null %>" 
+              aria-label="Dollar amount" 
+              name="price" 
+              id="price" 
+              min="0"
+              value="<%= (typeof old != 'undefined' && old.price ? old.price : budget.price) %>"
+              >
             </div>
             <p class="font-red fw-normal d-block text-start my-1">
-              Campo obligatorio
+              <%= (typeof errores !='undefined' && errores.price) ?
+            errores.price.msg : null %>
             </p>
 
-            <label class="d-block text-start fs-5 my-1" for="times">Veces por semana</label>
-            <input class="form-control w-50" type="number" name="times" id="times" min="0" max="7" />
+            <!-- week -->
+            <label class="d-block text-start fs-5 my-1" for="week">Veces por semana</label>
+            <input class="form-control w-50 <%= (typeof errores != 'undefined' &&
+            errores.week) ? " is-invalid" : null %> <%= (typeof errores
+            !='undefined' && !errores.week) ? "is-valid" : null %>" 
+            type="number" 
+            name="week" 
+            id="week" 
+            min="0" 
+            max="7" 
+            value="<%= (typeof old != 'undefined' && old.week ? old.week : budget.week) %>"
+            />
             <p class="font-red fw-normal d-block text-start my-1">
-              Campo obligatorio
+              <%= (typeof errores !='undefined' && errores.week) ?
+            errores.week.msg : null %>
             </p>
 
+            <!-- hours -->
             <label class="d-block text-start fs-5  my-1" for="hours">Horas por día</label>
-            <input class="form-control w-50" type="number" name="hours" id="hours" min="0" max="24" />
+            <input class="form-control w-50 <%= (typeof errores != 'undefined' &&
+          errores.hours) ? " is-invalid" : null %> <%= (typeof errores
+          !='undefined' && !errores.hours) ? "is-valid" : null %>" 
+            type="number" 
+            name="hours" 
+            id="hours" 
+            min="0" 
+            max="24" 
+            value="<%= (typeof old != 'undefined' && old.hours ? old.hours : budget.hours) %>"
+            />
             <p class="font-red fw-normal d-block text-start my-1">
-              Campo obligatorio
+              <%= (typeof errores !='undefined' && errores.hours) ?
+            errores.hours.msg : null %>
             </p>
 
+            <!-- iva -->
             <span class="fs-5 my-1">Inclusión de IVA</span>
             <div class="form-check">
-              <input type="radio" class="form-check-input" name="iva" id="iva-si" />
+              <input type="radio" class="form-check-input" name="iva" id="iva-si" <%= (typeof old != 'undefined' ? (old.iva == 1 ? "checked" : null) : (budget.iva == 1? "checked" : null)) %> value="1" />
               <label class="d-block text-start fs-5 form-check-label my-1" for="iva-si">Sí</label>
 
-              <input type="radio" class="form-check-input" name="iva" id="iva-no" />
+              <input type="radio" class="form-check-input" name="iva" id="iva-no"  <%= (typeof old != 'undefined' ? (old.iva == 0 ? "checked" : null) : (budget.iva == 0 ? "checked" : null)) %> value="0" />
               <label class="d-block text-start fs-5 form-check-label my-1" for="iva-no">No</label>
             </div>
-            <p class="font-red fw-normal d-block text-start my-1">
-              Campo obligatorio
-            </p>
 
+            <!-- materials -->
             <span class="fs-5 my-1">Inclusión de materiales</span>
             <div class="form-check">
-              <input type="radio" class="form-check-input" name="materials" id="materials-si" />
+              <input type="radio" class="form-check-input" name="materials" id="materials-si" <%= (typeof old != 'undefined' ? (old.materials == 1 ? "checked" : null) : (budget.materials == 1? "checked" : null)) %> value="1" />
               <label class="d-block text-start fs-5 form-check-label my-1" for="materials-si">Sí</label>
 
-              <input type="radio" class="form-check-input" name="materials" id="materials-no" />
+              <input type="radio" class="form-check-input" name="materials" id="materials-no" <%= (typeof old != 'undefined' ? (old.materials == 0 ? "checked" : null) : (budget.materials == 0 ? "checked" : null)) %> value="0" />
               <label class="d-block text-start fs-5 form-check-label my-1" for="materials-no">No</label>
             </div>
-            <p class="font-red fw-normal d-block text-start my-1">
-              Campo obligatorio
-            </p>
 
           </div>
 
