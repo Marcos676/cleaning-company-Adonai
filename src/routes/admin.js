@@ -4,16 +4,16 @@ const { show, create, edit, passChange, passChangeProcess, createProcess, editPr
 
 const adminCheck = require('../middlewares/adminCheck');
 const changePassValidator = require('../validations/changePassValidator');
-const budgetValidation = require('../validations/budgetValidation');
+const budgetValidator = require('../validations/budgetValidator');
 
 /* show budgets */
 router.get('/presupuestos', adminCheck, show);
 /* Create budget */
 router.get('/crear-presupuesto', adminCheck, create);
-router.post('/crear-presupuesto', budgetValidation, createProcess);
+router.post('/crear-presupuesto', budgetValidator, createProcess);
 /* Edit budget */
 router.get('/editar-presupuesto/:id', adminCheck, edit);
-router.put('/editar-presupuesto/:id', budgetValidation, editProcess);
+router.put('/editar-presupuesto/:id', budgetValidator, editProcess);
 /* Delete budget */
 router.delete('/presupuestos/:id', budgetDelete);
 /* Change password */

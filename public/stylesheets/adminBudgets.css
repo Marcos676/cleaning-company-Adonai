@@ -1,7 +1,14 @@
 /* budgets list */
-.admin-budget-list .budgets-container{
-    background-image: initial;
+.adminbudgetList {
     background-color: var(--color-blueDark);
+}
+.admin-budget-list .budgets-container h3 {
+    color: var(--color-white);
+  }
+.admin-budget-list .budgets-container{
+    background-image: none;
+    background-color: var(--color-blueDark);
+    min-height: 89vh;
 }
 
 /* budget create */
@@ -15,11 +22,29 @@
 }
 
 @media(min-width: 768px){
+
+    /* budgets list */
+
+  .admin-budget-list .budgets {
+    overflow: initial;
+    position: initial;
+  }
+
+  .admin-budget-list .budgets-container{
+    position: initial;
+  }
+
+  .admin-budget-list .budgets-container h3 {
+    color: var(--color-white);
+  }
+
+ /* Fonr consult */
     .budgetForms .budget-form{
         margin-left: 50px;
     }
 }
 @media(min-width: 1024px){
+     /* Fonr consult */
     .budgetForms .budget-form{
         margin-left: 100px;
     }

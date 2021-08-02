@@ -1,59 +1,145 @@
+.budgets-services .budgets img{
+  display: none;
+}
 
-.budgets-services .budgets-container h3{
-    color: var(--color-white);
+.budgets-services .budgets-container h3 {
+  color: var(--color-blueDark);
 }
-.budgets-services .budgets-container{
-    background-color: var(--color-blue);
-    background-image: url("../images/budgets/budget.png");
-    /* background-repeat: no-repeat; */
-    background-size: 100%;
-}
+
 /* budgetcard start*/
-.budgets-services .budget-card{
-    width: 200px;
-    background-color: var(--color-blueDark);
-    border-radius: 35px 35px 0 35px;
-    border: 1px solid var(--color-white);
-    color: var(--color-white);
+.budgets-services .budget-card {
+  width: 200px;
+  background-color: var(--color-blueDark);
+  border-radius: 35px 35px 0 35px;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
 }
-.budgets-services .budget-card .budget-detail{
-background-color: var(--color-blue);
-border-top: 1px solid var(--color-white);
-border-bottom: 1px solid var(--color-white);
+.budgets-services .budget-card .budget-detail {
+  background-color: var(--color-blue);
+  border-top: 1px solid var(--color-white);
+  border-bottom: 1px solid var(--color-white);
 }
-.budgets-services .budget-card .budget-detail li{
-    padding: 5px 0;
-    display: block;
-    margin: 0 5px;
-    border-bottom: 1px solid var(--color-red);
+.budgets-services .budget-card .budget-detail li {
+  padding: 5px 0;
+  display: block;
+  margin: 0 5px;
+  border-bottom: 1px solid var(--color-red);
 }
-.budgets-services .budget-card .budget-detail li:last-child{
-    border: none
+.budgets-services .budget-card .budget-detail li:last-child {
+  border: none;
 }
-.budgets-services .budget-card a{
-    font-size: 16px;
+.budgets-services .budget-card a {
+  font-size: 16px;
 }
 /* budgetcard end*/
 
-/* services */
-.budgets-services .services h3{
-    background-color: var(--color-blueDark);
-    color: var(--color-white);
+/* why hire us */
+.budgets-services .hire-us {
+  background-image: url("../images/budgets/budget.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow: scroll;
+  position: relative;
+}
+.budgets-services .hire-us img {
+  opacity: 0;
+}
+.budgets-services .hire-us .hire-us-text {
+  position: absolute;
+  top: 15%;
+  color: var(--color-white);
 }
 
-.budgets-services .service-name{
-    color: var(--color-white);
+/* services */
+
+.budgets-services .service-box{
+  overflow: scroll;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+
+.budgets-services .service-box img{
+  opacity: 0;
+}
+
+.budgets-services .service-box .service-text{
+  position: absolute;
+  top: 14vh;
+}
+
+.budgets-services .services h3 {
+  background-color: var(--color-blueDark);
+  color: var(--color-white);
+}
+
+.budgets-services .service-name {
+  color: var(--color-white);
 }
 
 /* custom quote */
-.budgets-services .custom-quote{
-    background-color: var(--color-blueDark);
-    color: var(--color-white);
+.budgets-services .custom-quote {
+  background-color: var(--color-blueDark);
+  color: var(--color-white);
+  width: 100%;
+  margin: 0;
 }
 
+@media(min-width: 425px){
 
-@media(min-width: 768px){
-    .budgets-services .form-consultation{
-        border-left: 1px solid var(--color-blue);
-    }
+  /* Services */
+  .budgets-services .service-box{
+    overflow: initial;
+  }
+
+  .budgets-services .service-box .service-text{
+    top: 50%;
+  }
+
+
+}
+
+@media (min-width: 768px) {
+  /* budgets list */
+  .budgets-services .budgets {
+    background-image: url("../images/budgets/budget.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: scroll;
+    position: relative;
+  }
+
+  .budgets-services .budgets img{
+    display: block;
+    opacity: 0;
+  }
+
+  .budgets-services .budgets-container{
+    position: absolute;
+    top: 0;
+  }
+
+  .budgets-services .budgets-container h3 {
+    color: var(--color-white);
+  }
+
+  /* Why hire us */
+  .budgets-services .hire-us {
+    background-image: none;
+    overflow: initial;
+  }
+  .budgets-services .hire-us img{
+    display: none;
+  }
+
+  .budgets-services .hire-us .hire-us-text {
+    position: unset;
+    color: var(--color-blueDark);
+    padding: 0 15px;
+  }
+
+  /* Fonr consult */
+  .budgets-services .form-consultation {
+    border-left: 1px solid var(--color-blue);
+  }
 }

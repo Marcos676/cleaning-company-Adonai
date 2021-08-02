@@ -1,0 +1,75 @@
+.btn-red {
+  background-color: var(--color-red);
+}
+.btn-blue {
+  background-color: var(--color-blue);
+}
+.btn-false {
+  font-size: 16px;
+}
+.btn-blue-dark {
+  background-color: var(--color-blueDark);
+}
+.btn-edit-delete {
+  width: 150px;
+}
+.max-width {
+  max-width: 1450px;
+}
+.padding-l-r {
+  padding: 5px 0;
+}
+.no-padd {
+  padding: 0;
+}
+.si-padd {
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+}
+
+/* mensaje de error consulta */
+
+.bc-msg-red {
+  background-color: rgba(253, 253, 253, 0.5);
+  border-radius: 8px;
+}
+
+/* margin for header responsive */
+.margin-top {
+  margin-top: 167px;
+}
+.margin-admin-top {
+  margin-top: 63px;
+}
+.font-red {
+  color: var(--color-red);
+}
+
+@media (min-width: 425px) {
+  .margin-top {
+    margin-top: 138px;
+  }
+}
+@media (min-width: 731px) {
+  .margin-top {
+    margin-top: 109px;
+  }
+}
+@media (min-width: 768px) {
+  .margin-admin-top {
+    margin-top: 90px;
+  }
+}
+@media (min-width: 974px) {
+  .margin-admin-top {
+    margin-top: 62px;
+  }
+}
+@media (min-width: 1024px) {
+  .margin-top {
+    margin-top: 120px;
+  }
+  .margin-admin-top {
+    margin-top: 74px;
+  }
+}

@@ -2,9 +2,9 @@ const { check } = require('express-validator');
 
 module.exports = [
     check('name')
-        .notEmpty().withMessage('El nombre es obligatorio'),
+        .notEmpty().withMessage('Se requiere el nombre'),
     check('price')
-        .notEmpty().withMessage('El precio es obligatorio'),
+        .notEmpty().withMessage('Se requiere el precio'),
     check('week')
         .notEmpty().withMessage('Este campo es obligatorio'),
     check('hours')

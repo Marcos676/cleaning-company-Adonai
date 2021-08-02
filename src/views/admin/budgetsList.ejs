@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <%- include("../partials/head")  %> 
-<body>
+<body class="adminbudgetList">
 <%- include("./partials/header")  %> 
 
 <div class="budgets-services admin-budget-list container-fluid margin-admin-top no-padd max-width">
     <!-- Budgets -->
     <div class="budgets">
         <div class="budgets-container py-4">
-          <h3 class="text-center fw-bold">NUESTROS PRESUPUESTOS</h3>
+          <h3 class="text-center fw-bold">PRESUPUESTOS</h3>
           <div
             class="
               d-flex
@@ -30,11 +30,11 @@
                 <li><%= budget.iva == 0 ? "No" : "Si" %> incluye IVA</li>
                 <li><%= budget.materials == 0 ? "No" : "Si" %>  incluye materiales</li>
               </ul>
-              <form action="/admin/presupuestos/<%= budget.id %>?_method=DELETE" method="POST">
+              <form class="deleteForm" action="/admin/presupuestos/<%= budget.id %>?_method=DELETE" method="POST">
               <a href="/admin/editar-presupuesto/<%= budget.id %>" class="btn btn-dark btn-blue mt-1 p-1 btn-edit-delete fw-bold"
                 >EDITAR</a
               >
-              <button type="submit" class="btn btn-dark btn-red mt-1 p-1 btn-edit-delete fw-bold btn-false"
+              <button type="submit" class="btn btn-dark btn-red mt-1 p-1 btn-edit-delete fw-bold btn-false" onclick="javascript:return eliminar()"
                 >ELIMINAR</button
               >
             </form>
@@ -48,6 +48,11 @@
 </div>
 
 <%- include("./partials/footer")  %> 
+
+<!-- sweet alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script src="/javascripts/deleteAlert.js"></script>
 
 </body>
 </html>

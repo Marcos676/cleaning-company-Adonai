@@ -6,7 +6,8 @@
 
     <div class="budgets-services margin-top max-width container-fluid no-padd">
       <!-- Budgets -->
-      <div class="budgets">
+      <div class="budgets d-flex justify-content-around">
+        <img src="/images/budgets/budget.png" width="100%" alt="">
         <div class="budgets-container py-4">
           <h3 class="text-center fw-bold">NUESTROS PRESUPUESTOS</h3>
           <div
@@ -43,28 +44,15 @@
 
           <% }) %>
 
-           <!--  <% for( let i = 0; i < 5; i++ ) { %>
-            <div class="budget-card fw-bold no-padd text-center py-1 my-4 mx-5">
-              <h6 class="fw-bold m-0 px-3">FINAL DE OBRA</h6>
-              <h5 class="fw-bold">$22.000</h5>
-              <ul class="budget-detail">
-                <li>7 vez por semana</li>
-                <li>4 horas</li>
-                <li>No incluye IVA</li>
-                <li>No incluye materiales</li>
-              </ul>
-              <a href="/abonos-servicios/#consulta-personalizada" class="btn btn-dark btn-red mt-1 p-1 fw-bold"
-                >ADQUIRIR PLAN</a
-              >
-            </div>
-            <% } %> -->
           </div>
         </div>
       </div>
 
       <!-- Why hire us -->
-      <div class="hire-us my-5 mx-3">
-        <h2 class="fw-bold text-center mb-4">¿POR QUÉ CONTRATARNOS?</h2>
+      <div class="hire-us my-5">
+        <img src="/images/budgets/budget.png" width="100%" alt="">
+        <div class="hire-us-text">
+          <h2 class="fw-bold text-center mb-4">¿POR QUÉ CONTRATARNOS?</h2>
         <h4 class="text-center">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
           deserunt consequuntur esse repudiandae iste voluptatum doloribus
@@ -73,6 +61,8 @@
           provident cum laborum nam mollitia recusandae culpa quisquam deleniti
           modi ipsa voluptates accusantium animi?
         </h4>
+        </div>
+        
       </div>
 
       <!-- Services -->
@@ -80,129 +70,119 @@
         <h3 class="text-center fw-bold m-0 py-1">Nuestros servicios</h3>
         <!-- Repeat services -->
         <!-- 1 -->
-        <div id="desinfeccion" class="w-100 position-relative">
+        <div id="desinfeccion" class="service-box w-100 position-relative">
           <img
             class="w-100"
             src="/images/services/service-desinfection.png"
             alt=""
           />
-          <h4
-            class="
-              service-name
-              position-absolute
-              top-50
-              start-50
-              translate-middle
-              fw-bold
-              text-center
-            "
-          >
+          <div class="service-text service-name
+          position-absolute
+          w-100
+          start-50
+          translate-middle
+          text-center">
+            <h4 class="fw-bold">
             DESINFECCIÓN
           </h4>
+          <p class="px-1">Nos encargamos de eliminar los gérmenes y bacterias que infectan o que pueden provocar una infección en un cuerpo o en un lugar.</p>
+          </div>
+          
         </div>
         <!-- 2 -->
-        <div id="limpieza-de-oficinas" class="w-100 position-relative">
+        <div id="limpieza-de-oficinas" class="service-box w-100 position-relative">
           <img
             class="w-100"
             src="/images/services/service-crearingOffice.png"
             alt=""
           />
-          <h4
-            class="
-              service-name
-              position-absolute
-              top-50
-              start-50
-              translate-middle
-              fw-bold
-              text-center
-            "
-          >
-            LIMPIEZA SE OFICINAS
+          <div class="service-text service-name
+          position-absolute
+          w-100
+          start-50
+          translate-middle
+          text-center">
+            <h4 class="fw-bold">
+            LIMPIEZA DE OFICINAS
           </h4>
+          <p class="px-1">Nos encargamos de la limpieza de su lugar de trabajo para que pueda comenzar su día laboral en un espacio limpio y agradable.</p>
+          </div>
         </div>
         <!-- 3 -->
-        <div id="finales-de-obra" class="w-100 position-relative">
+        <div id="finales-de-obra" class="service-box w-100 position-relative">
           <img
             class="w-100"
             src="/images/services/service-endOfWork.png"
             alt=""
           />
-          <h4
-            class="
-              service-name
-              position-absolute
-              top-50
-              start-50
-              translate-middle
-              fw-bold
-              text-center
-            "
-          >
+          <div class="service-text service-name
+          position-absolute
+          w-100
+          start-50
+          translate-middle
+          text-center">
+            <h4 class="fw-bold">
             FINALES DE OBRA
           </h4>
+          <p class="px-1">Ofrecemos servicio de limpieza final de obra, una vez finalizados los trabajos de albañilería, pintura, etc. Se limpian las instalaciones para proceder a su entrega u utilización.</p>
+          </div>
         </div>
         <!-- 4 -->
-        <div id="limpieza-en-escuelas" class="w-100 position-relative">
+        <div id="limpieza-en-escuelas" class="service-box w-100 position-relative">
           <img
             class="w-100"
             src="/images/services/service-schools.png"
             alt=""
           />
-          <h4
-            class="
-              service-name
-              position-absolute
-              top-50
-              start-50
-              translate-middle
-              fw-bold
-              text-center
-            "
-          >
-            LIMPIEZA EN ESCUELAS
+          <div class="service-text service-name
+          position-absolute
+          w-100
+          start-50
+          translate-middle
+          text-center">
+            <h4 class="fw-bold">
+            LIMPIEZA DE ESCUELAS
           </h4>
+          <p class="px-1">La limpieza y desinfección en las escuelas es una parte importante para prevenir y minimizar la propagación de patógenos en el entorno escolar.</p>
+          </div>
         </div>
         <!-- 5 -->
-        <div id="servicios-de-hoteleria" class="w-100 position-relative">
+        <div id="servicios-de-hoteleria" class="service-box w-100 position-relative">
           <img class="w-100" src="/images/services/service-hotel.png" alt="" />
-          <h4
-            class="
-              service-name
-              position-absolute
-              top-50
-              start-50
-              translate-middle
-              fw-bold
-              text-center
-            "
-          >
-            SERVICIOS DE HOTELERÍA
+          <div class="service-text service-name
+          position-absolute
+          w-100
+          start-50
+          translate-middle
+          text-center">
+            <h4 class="fw-bold">
+            LIMPIEZA DE HOTELERÍA
           </h4>
+          <p class="px-1">Realizamos nuestro servicio garantizando limpieza, calidad y desinfección. logrando así un ambiente optimo, más atractivo, confortable y saludable.</p>
+          </div>
+        </div>
         </div>
         <!-- 6 -->
         <div
           id="servicios-de-hoteleria-en-hospitales"
-          class="w-100 position-relative"
+          class="service-box w-100 position-relative"
         >
           <img
             class="w-100"
             src="/images/services/service-hospital.png"
             alt=""
           />
-          <h4
-            class="
-              service-name
-              position-absolute
-              top-50
-              start-50
-              translate-middle
-              fw-bold
-              text-center
-            "
-          >
-            HOTELERÍA EN HOSPITALES
+          <div class="service-text service-name
+          position-absolute
+          w-100
+          start-50
+          translate-middle
+          text-center">
+            <h4 class="fw-bold">
+            LIMPIEZA EN HOSPITALES
           </h4>
+          <p class="px-1">Aplicamos protocolos específicos de limpieza usando productos y maquinaria de última generación.</p>
+          </div>
         </div>
       </div>
 
@@ -214,10 +194,22 @@
             Completa el formulario y nos comunicaremos con la propuesta que se
             ajuste a tu necesidad.
           </h4>
+
+         
+
+            <% if (typeof consultingError !== 'undefined') { %>
+              <h4 class="mb-4 alert alert-danger" role="alert"> Algo salió mal favor complete nuevamente el formulario</h4>
+            <% } else if (typeof consultingSuccess !== 'undefined') { %>
+              <h4 class="mb-4 alert alert-success" role="alert">La consulta se ha enviado exitosamente</h4>
+            <% } %>
+
+
+          
+
         </div>
 
         <form
-          action=""
+          action="/consult"
           class="
             form-consultation
             text-center
@@ -225,42 +217,71 @@
             cv-form
             col-12 col-md-6
           "
-          enctype="multipart/form-data"
           method="POST"
         >
+
+        <!-- nombre completo -->
           <input
-            class="form-control"
+            class="form-control <%= (typeof errores != 'undefined' &&
+            errores.fullName) ? " is-invalid" : null %> <%= (typeof errores
+            !='undefined' && !errores.fullName) ? "is-valid" : null %>"
             type="text"
-            name="name"
+            name="fullName"
             id=""
+            value="<%= (typeof old !='undefined' && old.fullName
+          ? old.fullName : null) %>"
             placeholder="Nombre y apellido"
           />
-          <p class="font-red fw-normal d-block text-start my-1">Campo obligatorio</p>
+          <p class="error-fullName font-red fw-normal d-block text-start my-1"><%= (typeof errores !='undefined' && errores.fullName) ?
+            errores.fullName.msg : null %></p>
+
+  <!-- telefono -->
           <input
-            class="form-control"
+            class="form-control <%= (typeof errores != 'undefined' &&
+            errores.tel) ? " is-invalid" : null %> <%= (typeof errores
+            !='undefined' && !errores.tel) ? "is-valid" : null %>"
             type="number"
             name="tel"
             id=""
+            value="<%= (typeof old !='undefined' && old.tel
+            ? old.tel : null) %>"
             placeholder="Teléfono"
           />
-          <p class="font-red fw-normal d-block text-start my-1">Campo obligatorio</p>
+          <p class="errorTel font-red fw-normal d-block text-start my-1"><%= (typeof errores !='undefined' && errores.tel) ?
+            errores.tel.msg : null %></p>
+
+          <!-- email -->
           <input
-            class="form-control"
+            class="form-control <%= (typeof errores != 'undefined' &&
+            errores.email) ? " is-invalid" : null %> <%= (typeof errores
+            !='undefined' && !errores.email) ? "is-valid" : null %>"
             type="email"
             name="email"
             id=""
+            value="<%= (typeof old !='undefined' && old.email
+            ? old.email : null) %>"
             placeholder="Email"
           />
-          <p class="font-red fw-normal d-block text-start my-1">Campo obligatorio</p>
+          <p class="error-email font-red fw-normal d-block text-start my-1"><%= (typeof errores !='undefined' && errores.email) ?
+            errores.email.msg : null %></p>
+
+            <!-- mensaje -->
           <textarea
-            class="form-control"
+            class="form-control <%= (typeof errores != 'undefined' &&
+            errores.message) ? " is-invalid" : null %> <%= (typeof errores
+            !='undefined' && !errores.message) ? "is-valid" : null %>"
             name="message"
             id=""
             cols="30"
             rows="3"
+            value="<%= (typeof old !='undefined' && old.message
+            ? old.message : null) %>"
             placeholder="Mensaje"
           ></textarea>
-          <p class="font-red fw-normal d-block text-start my-1">Campo obligatorio</p>
+          <p class="error-message font-red fw-normal d-block text-start my-1"><%= (typeof errores !='undefined' && errores.message) ?
+            errores.message.msg : null %></p>
+
+            <p class="error font-red fw-normal d-block text-start my-1 text-center"></p>
 
           <button
             class="fw-bold btn btn-dark btn-blue fs-5 mt-3 px-4 py-1"
@@ -273,5 +294,11 @@
     </div>
 
     <%- include('./partials/footer') %>
+    <!-- sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/javascripts/serviceImages.js"></script>
+  <!-- valdaciones -->
+    <script src="/javascripts/consultValidator.js"></script>
+  
   </body>
 </html>

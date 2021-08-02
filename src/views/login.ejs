@@ -19,7 +19,7 @@
         value="<%= (typeof old != 'undefined' && old.email ? old.email : null) %>">
 
 <!-- validacion de email -->
-        <p class="font-red fw-normal d-block text-start my-1">
+        <p class="errorLoginEmail font-red fw-normal d-block text-start my-1">
           <%= (typeof errores !='undefined' && errores.email) ? errores.email.msg : null %>
         </p>
         
@@ -32,7 +32,7 @@
          id="pass">
 
         <!-- validacion de pass -->
-        <p class="font-red fw-normal d-block text-start my-1"> 
+        <p class="errorLoginPass font-red fw-normal d-block text-start my-1"> 
           <%= (typeof errores !='undefined' && errores.password) ? errores.password.msg
           : null %>
           </p>
@@ -43,5 +43,10 @@
     </div>
 
     <%- include("./partials/footer") %>
+    <!-- validacion -->
+    <script src="/javascripts/loginValidator.js"></script>
+    <!-- sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
   </body>
 </html>

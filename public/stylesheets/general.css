@@ -1,0 +1,23 @@
+/* General class */
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font: 16px var(--font);
+  }
+  a{
+    color: initial;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+    color: initial;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li{
+    list-style: none;
+    display: inline;
+  }

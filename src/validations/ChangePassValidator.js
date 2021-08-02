@@ -16,27 +16,14 @@ module.exports = [
     })
     .withMessage("Complete todos los campos de contraseña"),
 
-  body("newPass")
-    .custom((value, { req }) => {
-      if (
-        (value.length >= 6 && value.length <= 32) ||
-        (req.body.pass.length === 0 && value.length === 0)
-      ) {
-        return true;
-      } else {
-        return false;
-      }
-    })
-    .withMessage("La contraseña debe tener entre 6 y 36 caracteres"),
-
     body('newPass').custom((value) => {
-        let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]).{8,}$/;; 
+        let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]).{6,32}$/;; 
         if (regExPass.test(value) || (value === "")) {
             return true
         } else {
             return false
         }
-    }).withMessage('Debe tener numeros, letras minúsculas, mayúsculas y caracteres especiales'),
+    }).withMessage('Debe tener números, letras minúsculas, mayúsculas, caracteres especiales y entre 6 y 36 caracteres'),
 
   body("repeatPass")
     .custom((value, { req }) => {

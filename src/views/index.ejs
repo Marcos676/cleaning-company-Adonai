@@ -186,12 +186,8 @@
       <section class="covid max-width">
         <img class="w-100" src="/images/info/info-covid.png" alt="info covid" />
         <div class="info-covid">
-          <h4>COVID-19</h4>
-          <span
-            >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
-            repellat voluptatum nam perspiciatis ducimus quisquam commodi beatae
-            quasi nemo aliquid atque repudiandae, similique, animi voluptatibus,
-            sed enim asperiores blanditiis?</span
+          <h4>INFORMACION:</h4>
+          <span>Cada gramo de suciedad contiene más de 3,000 000 de bacterias nocivas. Las bacterias son causas directas de enfermedades como el cólera, tuberculosis, diarreas, infecciones respiratorias, etc. La limpieza es importante porque proporciona salud, comodidad, seguridad, belleza, orden, imagen, ambiente limpio e higiénico, por lo que evita enfermedades, las personas son más productivas, se descansa mejor, y todo esto se traduce en satisfacción.</span
           >
         </div>
       </section>
@@ -213,54 +209,96 @@
           </div>
 
           <form
-            action=""
+            action="/cv"
             class="text-center form-group cv-form col-12 col-md-6"
             enctype="multipart/form-data"
             method="POST"
           >
+          <!-- Nombre completo -->
             <input
-              class="form-control"
+              class="form-control <%= (typeof errores != 'undefined' &&
+              errores.fullName) ? " is-invalid" : null %> <%= (typeof errores
+              !='undefined' && !errores.fullName) ? "is-valid" : null %>"
               type="text"
-              name="name"
+              name="fullName"
               id=""
+              value="<%= (typeof old !='undefined' && old.fullName
+          ? old.fullName : null) %>"
               placeholder="Nombre y apellido"
+              
             />
-            <p class="font-red fw-normal d-block text-start my-1">Campo obligatorio</p>
+            <p class="error-fullName font-red fw-normal d-block text-start my-1"><%= (typeof errores !='undefined' && errores.fullName) ?
+              errores.fullName.msg : null %></p>
+            <!-- telefono -->
             <input
-              class="form-control"
-              type="number"
+              class="form-control <%= (typeof errores != 'undefined' &&
+              errores.tel) ? " is-invalid" : null %> <%= (typeof errores
+              !='undefined' && !errores.tel) ? "is-valid" : null %>"
+              type="text"
               name="tel"
               id=""
+              value="<%= (typeof old !='undefined' && old.tel
+            ? old.tel : null) %>"
               placeholder="Teléfono"
             />
-            <p class="font-red fw-normal d-block text-start my-1">Campo obligatorio</p>
+            <p class="errorTel font-red fw-normal d-block text-start my-1"><%= (typeof errores !='undefined' && errores.tel) ?
+              errores.tel.msg : null %></p>
+              <!-- Localidad -->
             <input
-              class="form-control"
+              class="form-control <%= (typeof errores != 'undefined' &&
+              errores.district) ? " is-invalid" : null %> <%= (typeof errores
+              !='undefined' && !errores.district) ? "is-valid" : null %>"
               type="text"
               name="district"
               id=""
+              value="<%= (typeof old !='undefined' && old.district
+            ? old.district : null) %>"
               placeholder="Localidad"
             />
-            <p class="font-red fw-normal d-block text-start my-1">Campo obligatorio</p>
+            <p class="error-district font-red fw-normal d-block text-start my-1"><%= (typeof errores !='undefined' && errores.district) ?
+              errores.district.msg : null %></p>
+            
+            <!-- email -->
             <input
-              class="form-control"
+              class="form-control  <%= (typeof errores != 'undefined' &&
+              errores.email) ? " is-invalid" : null %> <%= (typeof errores
+              !='undefined' && !errores.email) ? "is-valid" : null %>"
               type="email"
               name="email"
               id=""
+              value="<%= (typeof old !='undefined' && old.email
+            ? old.email : null) %>"
               placeholder="Email"
             />
-            <p class="font-red fw-normal d-block text-start my-1">Campo obligatorio</p>
+            <p class="error-email font-red fw-normal d-block text-start my-1"><%= (typeof errores !='undefined' && errores.email) ?
+              errores.email.msg : null %></p>
+
+              <!-- Mensaje -->
             <textarea
-              class="form-control"
+              class="form-control <%= (typeof errores != 'undefined' &&
+              errores.message) ? " is-invalid" : null %> <%= (typeof errores
+              !='undefined' && !errores.message) ? "is-valid" : null %>"
               name="message"
               id=""
               cols="30"
               rows="3"
-              placeholder="Mensaje"
+              value="<%= (typeof old !='undefined' && old.message
+              ? old.message : null) %>"
+              placeholder="Mensaje de presentación (opcional)"
             ></textarea>
-            <p class="font-red fw-normal d-block text-start my-1">El mensaje no debe tener más de 100 caracteres</p>
-            <input class="form-control" type="file" name="cv" id="" />
-            <p class="font-red fw-normal d-block text-start my-1">Campo obligatorio</p>
+            <p class="error-message font-red fw-normal d-block text-start my-1"><%= (typeof errores !='undefined' && errores.message) ?
+              errores.message.msg : null %></p>
+
+            <!-- cv -->
+            <input class="form-control <%= (typeof error
+            !='undefined' && error.cv) ? "is-invalid" : null %>" 
+            type="file" 
+            name="cv" 
+            id="" />
+            <p class="errorFile font-red fw-normal d-block text-start my-1"><%= (typeof error !='undefined' && error.cv) ?
+              error.cv.msg : null %></p>
+
+            <p class="error text-center font-red fw-normal d-block text-start my-1"></p>
 
             <button
               class="fw-bold btn btn-dark btn-blue-dark mt-3 px-4 py-1"
@@ -275,5 +313,11 @@
     </div>
 
     <%- include('./partials/footer') %>
+
+    <!-- validacion -->
+    <script src="/javascripts/cvValidator.js"></script>
+    <!-- sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
   </body>
 </html>
