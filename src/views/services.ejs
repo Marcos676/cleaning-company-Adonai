@@ -32,14 +32,9 @@
                 <li><%= budget.iva == 0 ? "No" : "Si" %> incluye IVA</li>
                 <li><%= budget.materials == 0 ? "No" : "Si" %>  incluye materiales</li>
               </ul>
-              <form action="" method="POST">
-              <a href="/admin/editar-presupuesto" class="btn btn-dark btn-blue mt-1 p-1 btn-edit-delete fw-bold"
-                >EDITAR</a
-              >
-              <button type="submit" class="btn btn-dark btn-red mt-1 p-1 btn-edit-delete fw-bold btn-false"
-                >ELIMINAR</button
-              >
-            </form>
+              <a href="/abonos-servicios#consulta-personalizada" class="btn btn-dark btn-red mt-1 p-1 fw-bold btn-false">
+                ADQUIRIR PLAN
+              </a>
             </div>
 
           <% }) %>
@@ -49,7 +44,7 @@
       </div>
 
       <!-- Why hire us -->
-      <div class="hire-us my-5">
+      <div class="hire-us">
         <img src="/images/budgets/budget.png" width="100%" alt="">
         <div class="hire-us-text">
           <h2 class="fw-bold text-center mb-4">¿POR QUÉ CONTRATARNOS?</h2>
@@ -187,7 +182,7 @@
       </div>
 
       <!-- custom quote form -->
-      <div id="consulta-personalizada" class="custom-quote row p-4">
+      <div id="consulta-personalizada" class="custom-quote row p-4 w-100">
         <div class="title col-12 col-md-6">
           <h2 class="fw-bold mb-4">¿NECESITAS UNA COTIZACION PERSONALIZADA?</h2>
           <h4 class="mb-4">

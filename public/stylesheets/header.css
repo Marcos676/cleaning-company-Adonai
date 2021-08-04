@@ -15,6 +15,7 @@ header{
 .header .contact-list li {
   padding-left: 6px;
   font-size: 20px;
+  line-height: 35px;
 }
 .header .contact-list a,
 .header .nav-contain li .links,
@@ -23,12 +24,20 @@ header{
   font-weight: bold;
   vertical-align: middle;
 }
+.header .contact-list li.contact a:hover{
+  transition: ease .5s;
+  color: var(--color-red);
+}
 .header .contact-list li i {
   font-size: 27px;
   font-weight: initial;
 }
+.header .contact-list .tel a{
+  vertical-align: top;
+}
 .header .contact-list .tel i {
   color: var(--color-red);
+  vertical-align: text-bottom;
 }
 .header .contact-list .tel {
   display: list-item;
@@ -40,6 +49,7 @@ header{
   padding: 2px;
 }
 
+
 /* nav-bar blue */
 .header .nav-bar {
   background-color: var(--color-blue);
@@ -48,11 +58,18 @@ header{
   justify-content: space-between;
 }
 .header .logo-contain {
-  width: 50px;
+  width: 130px;
 }
 .header .nav-contain li {
   text-align: center;
   font-size: 20px;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: var(--color-white);
+}
+.header .nav-contain li.menu a:hover{
+  transform: scale(1.15);
+  transition: ease 0.5s ;
 }
 .header .nav-contain .collapse {
   justify-content: flex-end;
@@ -75,9 +92,6 @@ header{
 }
 /* laptop */
 @media (min-width: 1024px) {
-    .header .logo-contain {
-        width: 60px;
-      }
   .header .nav-contain li {
     margin-left: 35px;
   }

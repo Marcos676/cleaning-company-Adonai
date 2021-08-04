@@ -28,13 +28,13 @@ module.exports = [
   body("tel")
     .custom((value) => {
       let tel = value.trim();
-      if (tel.length > 8) {
+      if (tel.length < 8) {
         return false;
       } else {
         return true;
       }
     })
-    .withMessage("El teléfono debe tener al menos 89 dígitos"),
+    .withMessage("El teléfono debe tener al menos 8 dígitos"),
 
   check("email").notEmpty().withMessage("El email es obligatorio"),
   check('email')

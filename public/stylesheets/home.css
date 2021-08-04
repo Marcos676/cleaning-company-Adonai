@@ -37,6 +37,10 @@
 .home .services-list li div {
   height: 100px;
 }
+.home .services-list li:hover{
+  transition: ease .5s;
+  transform: scale(1.3);
+}
 .home .services-list li p {
   margin: 0;
 }

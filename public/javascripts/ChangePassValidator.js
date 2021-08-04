@@ -87,7 +87,7 @@ window.addEventListener("load", () => {
             !newPass.classList.contains('is-invalid') &&
             !repeatPass.classList.contains('is-invalid')
         ) {
-            swal("Enhorabuena!",  `La contraseña se cambio exitosamente! `, "success");
+            swal("Procesando",  `Cambiando nueva contraseña`, "info");
             formPass.submit()
         }
     })
