@@ -74,10 +74,11 @@
   .home .info-us span,
   .home .info-covid span,
   .home .info-carousel p {
-    font-size: 20px;
+    font-size: 26px;
   }
+
   .home .info-us,
   .home .info-covid {
-    top: 55px;
+    top: 18px;
   }
 }

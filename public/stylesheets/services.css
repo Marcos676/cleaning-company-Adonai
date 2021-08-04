@@ -122,6 +122,10 @@
   .budgets-services .budgets-container h3 {
     color: var(--color-white);
   }
+  
+  .budgets-services .service-box .service-text p{
+    font-size: 28px;
+  }
 
   /* Why hire us */
   .budgets-services .hire-us {
