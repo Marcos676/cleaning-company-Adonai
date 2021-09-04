@@ -9,6 +9,7 @@ footer div div ul li span {
   text-align: center;
   font-weight: bold;
   color: var(--color-white);
+  font-size: 20px;
 }
 footer h4 {
   padding-bottom: 10px;
@@ -82,3 +83,14 @@ footer .footer-menu div {
     margin-bottom: 0;
   }
 }
+
+@media (min-width: 1024px) {
+  footer h4,
+  footer div div ul li span {
+    font-size: 24px;
+  }
+}
+
+
+
+

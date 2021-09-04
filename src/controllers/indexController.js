@@ -53,7 +53,7 @@ module.exports = {
 
       let mailOptions = {
         from: fullName,
-        to: "gabriel_45_96@outlook.com", //email reseptor, preferentemente outlook
+        to: "adonai.servicios@hotmail.com", //email receptor, preferentemente outlook
         subject: "CV de Adonai",
         text: `
       Remitente
@@ -159,7 +159,7 @@ module.exports = {
 
       let mailOptions = {
         from: fullName,
-        to: "gabriel_45_96@outlook.com", //email receptor, preferentemente outlook
+        to: "adonai.servicios@hotmail.com", //email receptor, preferentemente outlook
         subject: "Consulta de Adonai",
         text: `Remitente
             Nombre completo: ${fullName}

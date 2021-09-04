@@ -36,7 +36,7 @@
 
 /* margin for header responsive */
 .margin-top {
-  margin-top: 166px;
+  margin-top: 207px;
 }
 .margin-admin-top {
   margin-top: 49px;
@@ -45,19 +45,35 @@
   color: var(--color-red);
 }
 
+@media (min-width: 348px) {
+  .margin-top {
+    margin-top: 171px;
+  }
+}
+
 @media (min-width: 425px) {
   .margin-top {
-    margin-top: 132px;
+    margin-top: 172px;
+  }
+}
+@media (min-width: 427px) {
+  .margin-top {
+    margin-top: 137px;
   }
 }
 @media (min-width: 731px) {
   .margin-top {
-    margin-top: 96px;
+    margin-top: 137px;
+  }
+}
+@media (min-width: 761px) {
+  .margin-top {
+    margin-top: 101px;
   }
 }
 @media (min-width: 768px) {
   .margin-top {
-    margin-top: 107px;
+    margin-top: 114px;
   }
   .margin-admin-top {
     margin-top: 90px;
@@ -70,7 +86,7 @@
 }
 @media (min-width: 1024px) {
   .margin-top {
-    margin-top: 107px;
+    margin-top: 113px;
   }
   .margin-admin-top {
     margin-top: 90px;

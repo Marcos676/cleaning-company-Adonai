@@ -65,12 +65,16 @@
 
 .budgets-services .service-box .service-text{
   position: absolute;
-  top: 14vh;
+  top: 22vh;
 }
 
 .budgets-services .services h3 {
   background-color: var(--color-blueDark);
   color: var(--color-white);
+}
+
+.budgets-services .service-box .service-text p{
+  font-size: 20px;
 }
 
 .budgets-services .service-name {
@@ -122,9 +126,12 @@
   .budgets-services .budgets-container h3 {
     color: var(--color-white);
   }
+  .budgets-services .service-box .service-text h4{
+    font-size: 40px;
+  }
   
   .budgets-services .service-box .service-text p{
-    font-size: 28px;
+    font-size: 30px;
   }
 
   /* Why hire us */
@@ -144,8 +151,18 @@
     padding: 0 15px;
   }
 
-  /* Fonr consult */
+  /* Font consult */
   .budgets-services .form-consultation {
     border-left: 1px solid var(--color-blue);
+  }
+}
+
+@media (min-width: 1024px) {
+  .budgets-services .service-box .service-text h4{
+    font-size: 50px;
+  }
+  
+  .budgets-services .service-box .service-text p{
+    font-size: 40px;
   }
 }

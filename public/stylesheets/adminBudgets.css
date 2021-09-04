@@ -1,3 +1,6 @@
+body.adminView{
+  background-color: var(--color-blueDark);
+}
 /* budgets list */
 .adminbudgetList {
     background-color: var(--color-blueDark);
