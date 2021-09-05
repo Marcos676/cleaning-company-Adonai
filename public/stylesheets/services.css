@@ -8,7 +8,7 @@
 
 /* budgetcard start*/
 .budgets-services .budget-card {
-  width: 200px;
+  width: 100%;
   background-color: var(--color-blueDark);
   border-radius: 35px 35px 0 35px;
   border: 1px solid var(--color-white);
@@ -99,9 +99,16 @@
   .budgets-services .service-box .service-text{
     top: 50%;
   }
+}
 
+@media(min-width: 640px){
+  .budgets-services .budget-card{
+    width: 200px;
+  }
 
 }
+
+
 
 @media (min-width: 768px) {
   /* budgets list */
