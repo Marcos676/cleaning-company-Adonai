@@ -104,6 +104,7 @@
 @media(min-width: 640px){
   .budgets-services .budget-card{
     width: 200px;
+    margin: 20px 40px
   }
 
 }
