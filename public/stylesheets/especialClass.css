@@ -47,7 +47,7 @@
 
 @media (min-width: 425px) {
   .margin-top {
-    margin-top: 130px;
+    margin-top: 129px;
   }
 }
 @media (min-width: 591px) {
@@ -62,7 +62,7 @@
 }
 @media (min-width: 768px) {
   .margin-top {
-    margin-top: 97px;
+    margin-top: 96px;
   }
   .margin-admin-top {
     margin-top: 90px;
@@ -74,9 +74,9 @@
   }
 }
 @media (min-width: 1024px) {
-  .margin-top {
+  /* .margin-top {
     margin-top: 107px;
-  }
+  } */
   .margin-admin-top {
     margin-top: 90px;
   }

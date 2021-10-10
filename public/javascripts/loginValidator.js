@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
     /* Expresiónes regulares */
     
     /* es email */
-    let regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
+    //let regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 
     /* VALIDACIONES DE LOGIN */
 
@@ -26,10 +26,10 @@ window.addEventListener('load', () => {
                 emailLogin.classList.add('is-invalid');
                 break;
 
-            case !regExEmail.test(emailLogin.value):
-                qs('.errorLoginEmail').innerHTML = 'El email no es válido';
-                emailLogin.classList.add('is-invalid');
-                break;
+            // case !regExEmail.test(emailLogin.value):
+            //     qs('.errorLoginEmail').innerHTML = 'El email no es válido';
+            //     emailLogin.classList.add('is-invalid');
+            //     break;
 
             default:
                 qs('.errorLoginEmail').innerHTML = '';
@@ -57,20 +57,20 @@ window.addEventListener('load', () => {
     })
 
     /* Condición para la ejecución de submit en Login */
-    formLogin.addEventListener('submit', (e) => {
-        e.preventDefault() 
-        if( 
-            !emailLogin.classList.contains('is-valid') ||
-            !passLogin.classList.contains('is-valid')
-        ) {
-            swal("Aviso", "Revise los campos incorrectos.", "warning");
-        }
-        if( 
-            emailLogin.classList.contains('is-valid') &&
-            passLogin.classList.contains('is-valid')
-        ) {
-            formLogin.submit()
-        }
-    })
+    // formLogin.addEventListener('submit', (e) => {
+    //     e.preventDefault() 
+    //     if( 
+    //         !emailLogin.classList.contains('is-valid') ||
+    //         !passLogin.classList.contains('is-valid')
+    //     ) {
+    //         swal("Aviso", "Revise los campos incorrectos.", "warning");
+    //     }
+    //     if( 
+    //         emailLogin.classList.contains('is-valid') &&
+    //         passLogin.classList.contains('is-valid')
+    //     ) {
+    //         formLogin.submit()
+    //     }
+    // })
 })
 

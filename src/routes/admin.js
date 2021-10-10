@@ -3,7 +3,7 @@ var router = express.Router();
 const { show, create, edit, passChange, passChangeProcess, createProcess, editProcess, budgetDelete } = require('../controllers/adminController');
 
 const adminCheck = require('../middlewares/adminCheck');
-const changePassValidator = require('../validations/changePassValidator');
+const changePassValidator = require('../validations/ChangePassValidator');
 const budgetValidator = require('../validations/budgetValidator');
 
 /* show budgets */
