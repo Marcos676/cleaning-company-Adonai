@@ -148,23 +148,23 @@ module.exports = {
       let { fullName, tel, email, message } = req.body;
 
       let transporter = nodemailer.createTransport({
-        host: "smtp-mail.outlook.com",
-        secureConnection: false,
-        port: 587,
-        tls: {
-          ciphers: "SSLv3",
-        },
+        host: "smtp.gmail.com",
+        secure: true, // use SSL
+        port: 465,
+        // tls: {
+        //   ciphers: "SSLv3",
+        // },
         auth: {
-          user:"adonai-web@outlook.com", //email emisor, preferentemente outlook
-          pass:"Adonai_javi_2021", //contraseña de email emisor
-        },
-        tls: {
-          rejectUnauthorized: false,
-        },
+          user:"adonaipaginaweb@gmail.com", //email emisor, preferentemente outlook
+          pass:"Adonai123456", //contraseña de email emisor
+        }//,
+        // tls: {
+        //   rejectUnauthorized: false,
+        // },
       });
 
       let mailOptions = {
-        from: 'adonai-web@outlook.com',
+        from: `${fullName}`,
         to: "adonai.servicios@hotmail.com", //email receptor, preferentemente outlook
         subject: "Consulta de Adonai",
         text: `Remitente
