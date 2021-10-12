@@ -34,7 +34,7 @@ module.exports = {
 
     } else {
       let { fullName, tel, district, email, message } = req.body;
-
+      
       let transporter = nodemailer.createTransport({
         host: "smtp-mail.outlook.com",
         secureConnection: false,
@@ -43,8 +43,8 @@ module.exports = {
           ciphers: "SSLv3",
         },
         auth: {
-          user: process.env.EMISOR_EMAIL, //email emisor, preferentemente outlook
-          pass: process.env.PASS_EMAIL, //contraseña de email emisor
+          user:"adonai-web@outlook.com", //email emisor, preferentemente outlook
+          pass:"Adonai_javi_2021", //contraseña de email emisor
         },
         tls: {
           rejectUnauthorized: false,
@@ -52,7 +52,7 @@ module.exports = {
       });
 
       let mailOptions = {
-        from: fullName,
+        from: 'adonai-web@outlook.com',
         to: "adonai.servicios@hotmail.com", //email receptor, preferentemente outlook
         subject: "CV de Adonai",
         text: `
@@ -70,11 +70,15 @@ module.exports = {
           },
         ],
       };
-
+      console.log(transporter);
+      console.log(mailOptions);
       transporter.sendMail(mailOptions, (error, info) => {
+        console.log(error);
+        console.log(info);
         if (error) {
           console.log("algo salio mal !!!!!!!!!!!");
-          res.status(500).send(error.message)(async () => {
+          //res.status(500).send(error.message)
+          (async () => {
             try {
               await fs.unlinkSync(cv.path);
 
@@ -149,8 +153,8 @@ module.exports = {
           ciphers: "SSLv3",
         },
         auth: {
-          user: process.env.EMISOR_EMAIL, //email emisor, preferentemente outlook
-          pass: process.env.PASS_EMAIL, //contraseña de email emisor
+          user:"adonai-web@outlook.com", //email emisor, preferentemente outlook
+          pass:"Adonai_javi_2021", //contraseña de email emisor
         },
         tls: {
           rejectUnauthorized: false,
@@ -158,7 +162,7 @@ module.exports = {
       });
 
       let mailOptions = {
-        from: fullName,
+        from: 'adonai-web@outlook.com',
         to: "adonai.servicios@hotmail.com", //email receptor, preferentemente outlook
         subject: "Consulta de Adonai",
         text: `Remitente
@@ -168,8 +172,13 @@ module.exports = {
             Mensaje: 
             ${message}`,
       };
+      console.log(transporter);
+      console.log(mailOptions);
+      console.log("por enviar");
 
       transporter.sendMail(mailOptions, (error, info) => {
+        console.log(info);
+        console.log(error);
         if (error) {
           /* console.log("algo salio mal !!!!!!!!!!!");
                 res.status(500).send(error.message) */

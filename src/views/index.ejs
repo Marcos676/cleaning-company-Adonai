@@ -284,13 +284,8 @@
               errores.message.msg : null %></p>
 
             <!-- cv -->
-            <input class="form-control <%= (typeof error
-            !='undefined' && error.cv) ? "is-invalid" : null %>" 
-            type="file" 
-            name="cv" 
-            id="" />
-            <p class="errorFile font-red fw-normal d-block text-start my-1"><%= (typeof error !='undefined' && error.cv) ?
-              error.cv.msg : null %></p>
+            <input class="form-control <%= typeof error !='undefined' && error.cv ? "is-invalid" : null %>" type="file" name="cv"/>
+            <p class="errorFile font-red fw-normal d-block text-start my-1"><%= (typeof error !='undefined' && error.cv) ? error.cv.msg : null %></p>
 
             <p class="error text-center font-red fw-normal d-block text-start my-1"></p>
 
