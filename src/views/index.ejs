@@ -307,7 +307,17 @@
     </div>
 
     <%- include('./partials/footer') %>
-
+    
+    <% if (typeof error != 'undefined') { %>
+      <p style="height: 0px; margin: 0; padding: 0;">
+      <%= error %> 
+      </p>
+    <% } %>
+    <% if (typeof info != 'undefined') { %>
+      <p style="height: 0px; margin: 0; padding: 0;">
+      <%= info %> 
+      </p>
+    <% } %>
     <!-- validacion -->
     <script src="/javascripts/cvValidator.js"></script>
     <!-- sweet alert -->

@@ -87,6 +87,8 @@ module.exports = {
                 errores: errores.mapped(),
                 old: req.body,
                 cvError: "error", //crear condicion y cartel de error al enviar consulta
+                error,
+                info
               });
             } catch (err) {
               console.error("Error 3 al eliminar el archivo cv:", err);
@@ -191,6 +193,8 @@ module.exports = {
                 budgets,
                 old: req.body,
                 consultingError: "error", //crear condicion y cartel de error al enviar consulta
+                error,
+                info
               });
             })
             .catch((error) => res.send(error));

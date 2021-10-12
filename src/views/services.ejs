@@ -284,6 +284,18 @@
     </div>
 
     <%- include('./partials/footer') %>
+
+    <% if (typeof error != 'undefined') { %>
+      <p style="height: 0px; margin: 0; padding: 0;">
+      <%= error %> 
+      </p>
+    <% } %>
+    <% if (typeof info != 'undefined') { %>
+      <p style="height: 0px; margin: 0; padding: 0;">
+      <%= info %> 
+      </p>
+    <% } %>
+    
     <!-- sweet alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="/javascripts/serviceImages.js"></script>
