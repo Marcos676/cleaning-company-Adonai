@@ -141,7 +141,7 @@ window.addEventListener("load", () => {
       email.classList.contains("is-valid") &&
       message.classList.contains("is-valid")
     ) {
-      swal("Procesando", `Espere por favor`, "info");
+      swal("Procesando", `Espere por favor, luego vea el estado de su solicitud en el formulario`, "info");
 
       formConsult.submit();
     }

@@ -173,7 +173,7 @@ formCv.addEventListener('submit', (e) => {
         fullNameCv.classList.contains('is-valid') &&
         telCv.classList.contains('is-valid') && districtCv.classList.contains('is-valid') && emailCv.classList.contains('is-valid') && messageCv.classList.contains('is-valid') && fileCv.classList.contains('is-valid')
     ) {
-        swal("Procesando", `Espere por favor mientras enviamos su CV`, "info");
+        swal("Procesando", `Espere por favor, luego vea el estado de su solicitud en el formulario`, "info");
 
         formCv.submit()
     }
