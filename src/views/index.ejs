@@ -287,7 +287,7 @@
             <input class="form-control <%= typeof error !='undefined' && error.cv ? "is-invalid" : null %>" type="file" name="cv"/>
             <p class="errorFile font-red fw-normal d-block text-start my-1"><%= (typeof error !='undefined' && error.cv) ? error.cv.msg : null %></p>
 
-            <p class="error text-center font-red fw-normal d-block text-start my-1"></p>
+            <p class="error text-center font-red fw-normal d-block text-start my-1"><%= typeof cvError != 'undefined' ? 'Debido a problemas de conexión no se pudo enviar su CV, si el problema persiste puede enviarnoslo manualmete a nuestro correo adonai.servicios@hotmail.com'  %> </p>
 
             <button
               class="fw-bold btn btn-dark btn-blue-dark mt-3 px-4 py-1"
